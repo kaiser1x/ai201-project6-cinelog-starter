@@ -116,20 +116,18 @@ Or run the automated suite: `pytest tests/ -v` (12 tests, covering add/dedup/rem
 
 ## git log --oneline
 
-<!-- Replace this with an actual screenshot of `git log --oneline main..HEAD` before submitting. -->
+![git log --oneline showing feature/watchlist commit history](./git-log-screenshot.png)
 
 ```
-43cbcae docs: add pr-response.md with review responses and design decisions
-617cc38 fix: migrate watchlist service and model to UUID film IDs after main rebase
-b8ca396 fix: add missing Film.watchlist_entries relationship
-0ffd755 test: add watchlist service tests
-49af4de feat: add explicit visibility parameter to add_to_watchlist
-50b72cb feat: implement remove_from_watchlist
-22edfbd fix: sort watchlist by date added (newest first) instead of alphabetically
-084c7eb fix: add deduplication check to add_to_watchlist
-793c15c fix: rename save_to_watchlist to add_to_watchlist per service naming convention
-45f9933 fix: update film retrieval method to use db.session.get in collection and watchlist services
-3eef9ae feat: add watchlist model and add_to_watchlist endpoint
+009f754 (HEAD -> feature/watchlist, origin/feature/watchlist) docs: add pr-response.md with review responses and design decisions
+5b6b05e test: add watchlist service tests
+9ab28dd feat: implement watchlist service and endpoints (add, remove, dedup, visibility, sort by date)
+61c1a7d feat: add WatchlistEntry model and register watchlist blueprint
+109b968 fix: update film retrieval method to use db.session.get in collection service
+bbe206c (origin/main, origin/HEAD, main) Merge pull request #2 from ascherj/chore/add-gitignore
+718a9a8 chore: add .gitignore for generated files
+07ca580 refactor: migrate film IDs from integer to UUID
+014ae54 feat: initial CineLog API with film collection feature
 ```
 
-11 commits ahead of `main`, all conventional format, no merge commits.
+5 commits ahead of `main`, all conventional format, no merge commits.
